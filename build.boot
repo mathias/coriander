@@ -27,7 +27,7 @@
   [p port       PORT int "The port to run the web REPL on. Defaults to 4000."
    i ip         IP   str "The IP address the server listens on. Defaults to 127.0.0.1"
    n nrepl-port PORT int "The port that the nREPL server will be started up on. Defaults to a free port."
-   b block             bool "Blocking (for standalone use)"]
+   b block           bool "Blocking (for standalone use)"]
   (let [worker   (pod/make-pod (get-env))
         ip   (or ip "127.0.01")
         port (or port 4000)
